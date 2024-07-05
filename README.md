@@ -1,4 +1,6 @@
-# SEST
+# Temporal-disaggregation of Regional Climate Models (RCM) with Artificial Neural Networks (ANNs)
+
+
 
 This repository aims to develop a tool for temporal disaggregation of regional climate models.
 ![Mrs. Frizzle](plots/Mrs._Frizzle.webp)
