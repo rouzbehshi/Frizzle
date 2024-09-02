@@ -37,6 +37,7 @@ in each iteration, covering all possible 20-year periods within
 the dataset. The final year of the dataset, not included in the
 rolling windows, is used to test the model’s performance after
 the training and validation phases.
+![Rolling Window](plots/RW.jpg)
 
 # References
 [1] H. C. Bloomfield et al., ”The Importance of Weather and Climate to Energy Systems: A Workshop on Next Generation Challenges in Energy–Climate Modeling”, Bulletin of the American Meteorological Society, vol. 102, no. 1, pp. E159–E167, 2021.
