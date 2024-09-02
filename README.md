@@ -1,7 +1,9 @@
 # Temporal-disaggregation of Regional Climate Models (RCM) with Artificial Neural Networks (ANNs)
 # Background
 The energy system's growing sensitivity to weather not only amplifies its vulnerability to current climate fluctuations but also suggests that human-induced climate change could alter the patterns and spatial-temporal variability of meteorological factors, thereby influencing both energy supply and demand [1].
-As a result, the use of long-term climate data in the planning and operation of power systems is rapidly increasing. Several climate models with fine spatial resolution are available as outputs from Regional Climate Models (RCMs), which provide downscaled data derived from Global Climate Models (GCMs). These models can be incorporated into power system studies to simulate possible future conditions that the systems might encounter. However, these climate models are mainly available with daily resolution due to the limited space of data servers [2]. A higher level of temporal resolution is needed to properly plan and operate power systems by accounting for the intermittent nature of renewable energy sources.
+As a result, the use of long-term climate data in the planning and operation of power systems is rapidly increasing. 
+
+Several climate models with fine spatial resolution are available as outputs from Regional Climate Models (RCMs), which provide downscaled data derived from Global Climate Models (GCMs). These models can be incorporated into power system studies to simulate possible future conditions that the systems might encounter. However, these climate models are mainly available with daily resolution due to the limited space of data servers [2]. A higher level of temporal resolution is needed to properly plan and operate power systems by accounting for the intermittent nature of renewable energy sources.
 
 
 This repository aims to develop a tool to
@@ -14,14 +16,17 @@ The trained models will be used as transformation functions,
 transforming the climate models with daily resolution into
 hourly.
 ![Mrs. Frizzle](plots/Mrs._Frizzle.webp)
+*The Magic School Bus - Goes Cellular - Ep. 44 was the inspiration of this 
+repo :))*
 
 
 # Data Acquisition
 The hourly bias-corrected reconstruction of near-surface meteorological variables derived from the fifth generation of the European Centre for Medium-Range Weather Forecasts (ECMWF) atmospheric reanalyses (ERA5)
-is used as the input to the model <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-near-surface-meteorological-variables?tab=overview" target="_blank">[3]</a>.
+is used for training the model <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-near-surface-meteorological-variables?tab=overview" target="_blank">[3]</a>.
 # ANN Model
-Figure shows the architecture of the ANN.
+<a href="#ANN Model">Figure 2</a> shows the architecture of the ANN.
 ![ANN Model](plots/ANN.jpg)
+*Architecture of the ANN*
 For each climate variable, an ANN is separately structured
 with one hidden layer containing 60 neurons (m=60) and an
 output layer with 24 neurons (z=24), each corresponding to
@@ -46,6 +51,7 @@ the dataset. The final year of the dataset, not included in the
 rolling windows, is used to test the model’s performance after
 the training and validation phases.
 ![Rolling Window](plots/RW.jpg)
+*Rolling Window*
 
 # References
 [1] H. C. Bloomfield et al., ”The Importance of Weather and Climate to Energy Systems: A Workshop on Next Generation Challenges in Energy–Climate Modeling”, Bulletin of the American Meteorological Society, vol. 102, no. 1, pp. E159–E167, 2021.
