@@ -11,7 +11,8 @@ This repository aims to develop a tool for temporal disaggregation of regional c
 # Data Acquisition
 The hourly bias-corrected reconstruction of near-surface meteorological variables derived from the fifth generation of the European Centre for Medium-Range Weather Forecasts (ECMWF) atmospheric reanalyses (ERA5)
 is used as the input to the model <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-near-surface-meteorological-variables?tab=overview" target="_blank">[3]</a>.
-
+# ANN Model
+![ANN Model](plots/ANN2.pdf)
 
 # References
 [1] H. C. Bloomfield et al., ”The Importance of Weather and Climate to Energy Systems: A Workshop on Next Generation Challenges in Energy–Climate Modeling”, Bulletin of the American Meteorological Society, vol. 102, no. 1, pp. E159–E167, 2021.
