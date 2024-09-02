@@ -14,5 +14,7 @@ is used as the input to the model <a href="https://cds.climate.copernicus.eu/cds
 
 # References
 [1] https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-near-surface-meteorological-variables?tab=overview
+
 [2] H. C. Bloomfield et al., ”The Importance of Weather and Climate to Energy Systems: A Workshop on Next Generation Challenges in Energy–Climate Modeling”, Bulletin of the American Meteorological Society, vol. 102, no. 1, pp. E159–E167, 2021.
+
 [3] M. Juckes et al., "The CMIP6 Data Request (DREQ, version 01.00.31)", Geoscientific Model Development, vol. 13, no. 1, pp. 201–224, 2020. 
