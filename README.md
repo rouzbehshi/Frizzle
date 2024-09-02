@@ -23,17 +23,17 @@ The models are trained for 3000 iterations (l).
 The early stopping method is used as a regularizer during
 training to prevent overfitting. This method monitors the
 model’s performance on the validation dataset by observing the
-errors. This work considers patience of 20 iterations, meaning
+errors. This work considers patience of 40 iterations, meaning
 the training will stop when the validation error increases or
 does not improve for 40 consecutive iterations.
 
 The rolling window approach is used to train the ANN models, enhancing
 the model’s ability to generalize across different temporal
 segments of the dataset. Each rolling window encompasses
-a subset of the data equivalent to one year for training and the
-subsequent year for validation to fine-tune the hyperparame-
-ters. This window is progressively shifted forward by one year
-in each iteration, covering all possible 20-year periods within
+a subset of the data equivalent to 90% of data in one year for training and the
+remaining for validation to fine-tune the hyperparameters. This window is 
+progressively shifted forward by half a year
+in each iteration, covering all possible 15-year periods within
 the dataset. The final year of the dataset, not included in the
 rolling windows, is used to test the model’s performance after
 the training and validation phases.
