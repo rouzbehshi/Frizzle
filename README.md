@@ -12,10 +12,31 @@ This repository aims to develop a tool for temporal disaggregation of regional c
 The hourly bias-corrected reconstruction of near-surface meteorological variables derived from the fifth generation of the European Centre for Medium-Range Weather Forecasts (ECMWF) atmospheric reanalyses (ERA5)
 is used as the input to the model <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-near-surface-meteorological-variables?tab=overview" target="_blank">[3]</a>.
 # ANN Model
-Figure shows the architecture of the 
-ANN.
+Figure shows the architecture of the ANN.
 ![ANN Model](plots/ANN.jpg)
+For each climate variable, an ANN is separately structured
+with one hidden layer containing 60 neurons (m=60) and an
+output layer with 24 neurons (z=24), each corresponding to
+an hour in a day.
 
+The models are trained for 3000 iterations (l).
+The early stopping method is used as a regularizer during
+training to prevent overfitting. This method monitors the
+model’s performance on the validation dataset by observing the
+errors. This work considers patience of 20 iterations, meaning
+the training will stop when the validation error increases or
+does not improve for 40 consecutive iterations.
+
+The rolling window approach is used to train the ANN models, enhancing
+the model’s ability to generalize across different temporal
+segments of the dataset. Each rolling window encompasses
+a subset of the data equivalent to one year for training and the
+subsequent year for validation to fine-tune the hyperparame-
+ters. This window is progressively shifted forward by one year
+in each iteration, covering all possible 20-year periods within
+the dataset. The final year of the dataset, not included in the
+rolling windows, is used to test the model’s performance after
+the training and validation phases.
 
 # References
 [1] H. C. Bloomfield et al., ”The Importance of Weather and Climate to Energy Systems: A Workshop on Next Generation Challenges in Energy–Climate Modeling”, Bulletin of the American Meteorological Society, vol. 102, no. 1, pp. E159–E167, 2021.
