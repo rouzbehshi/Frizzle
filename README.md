@@ -12,8 +12,11 @@ daily resolution into sub-daily while preserving the distribution
 of the input climate model. The ANN models analyze the
 temporal pattern of climate variables from historical values
 and obtain the temporal pattern of each climate variable.
+A separate ANN model for average temperature, shortwave radiation,
+humidity, and wind speed is trained on the historical values
+from bias-corrected hourly reanalysis WFDE5.
 The trained models will be used as transformation functions,
-transforming the climate models with daily resolution into
+transforming other climate models with daily resolution into
 hourly.
 ![Mrs. Frizzle](plots/Mrs._Frizzle.webp)
 *The Magic School Bus - Goes Cellular - Ep. 44 was the inspiration of this 
@@ -23,6 +26,16 @@ repo :))*
 # Data Acquisition
 The hourly bias-corrected reconstruction of near-surface meteorological variables derived from the fifth generation of the European Centre for Medium-Range Weather Forecasts (ECMWF) atmospheric reanalyses (ERA5)
 is used for training the model <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/derived-near-surface-meteorological-variables?tab=overview" target="_blank">[3]</a>.
+
+```DataCleaningPipeline``` in DataCleaning.py processes the input data 
+structure (datetime indexes and removing unnecessary columns).
+
+```DataProcessingPipeline``` in DataProcessing.py creates the additional 
+features and creates the train and test data sets.
+
+Available Climate variables: ['Avg_Temp'
+'humidity', 'wind_speed', 'Gd(i)']
+
 # ANN Model
 <a href="#ANN Model">Figure 2</a> shows the architecture of the ANN.
 ![ANN Model](plots/ANN.jpg)
@@ -51,7 +64,9 @@ in each iteration, covering all possible 15-year periods within
 the dataset. The final year of the dataset, not included in the
 rolling windows, is used to test the model’s performance after
 the training and validation phases.
+
 ![Rolling Window](plots/RW.jpg)
+
 *Rolling Window*
 
 # References
