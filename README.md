@@ -4,7 +4,15 @@ The energy system's growing sensitivity to weather not only amplifies its vulner
 As a result, the use of long-term climate data in the planning and operation of power systems is rapidly increasing. Several climate models with fine spatial resolution are available as outputs from Regional Climate Models (RCMs), which provide downscaled data derived from Global Climate Models (GCMs). These models can be incorporated into power system studies to simulate possible future conditions that the systems might encounter. However, these climate models are mainly available with daily resolution due to the limited space of data servers [2]. A higher level of temporal resolution is needed to properly plan and operate power systems by accounting for the intermittent nature of renewable energy sources.
 
 
-This repository aims to develop a tool for temporal disaggregation of regional climate models.
+This repository aims to develop a tool to
+disaggregate the temporal resolution of climate models with
+daily resolution into sub-daily while preserving the distribution
+of the input climate model. The ANN models analyze the
+temporal pattern of climate variables from historical values
+and obtain the temporal pattern of each climate variable.
+The trained models will be used as transformation functions,
+transforming the climate models with daily resolution into
+hourly.
 ![Mrs. Frizzle](plots/Mrs._Frizzle.webp)
 
 
