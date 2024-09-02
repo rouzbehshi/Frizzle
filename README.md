@@ -27,6 +27,7 @@ is used for training the model <a href="https://cds.climate.copernicus.eu/cdsapp
 <a href="#ANN Model">Figure 2</a> shows the architecture of the ANN.
 ![ANN Model](plots/ANN.jpg)
 *Architecture of the ANN*
+
 For each climate variable, an ANN is separately structured
 with one hidden layer containing 60 neurons (m=60) and an
 output layer with 24 neurons (z=24), each corresponding to
