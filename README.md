@@ -14,6 +14,7 @@ is used as the input to the model <a href="https://cds.climate.copernicus.eu/cds
 # ANN Model
 ![ANN Model](plots/ANN.jpg)
 
+
 # References
 [1] H. C. Bloomfield et al., ”The Importance of Weather and Climate to Energy Systems: A Workshop on Next Generation Challenges in Energy–Climate Modeling”, Bulletin of the American Meteorological Society, vol. 102, no. 1, pp. E159–E167, 2021.
 
