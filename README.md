@@ -1,4 +1,5 @@
 # Temporal-disaggregation of Regional Climate Models (RCM) with Artificial Neural Networks (ANNs)
+# Background
 The energy system's growing sensitivity to weather not only amplifies its vulnerability to current climate fluctuations but also suggests that human-induced climate change could alter the patterns and spatial-temporal variability of meteorological factors, thereby influencing both energy supply and demand [2].
 As a result, the use of long-term climate data in the planning and operation of power systems is rapidly increasing. Several climate models with fine spatial resolution are available as outputs from Regional Climate Models (RCMs), which provide downscaled data derived from Global Climate Models (GCMs). These models can be incorporated into power system studies to simulate possible future conditions that the systems might encounter. However, these climate models are mainly available with daily resolution due to the limited space of data servers [3]. A higher level of temporal resolution is needed to properly plan and operate power systems by accounting for the intermittent nature of renewable energy sources.
 
