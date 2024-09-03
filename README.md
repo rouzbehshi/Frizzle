@@ -18,7 +18,8 @@ from bias-corrected hourly reanalysis WFDE5.
 The trained models will be used as transformation functions,
 transforming other climate models with daily resolution into
 hourly.
-![Mrs. Frizzle](plots/Mrs._Frizzle.webp)
+<img src="plots/Mrs._Frizzle.webp" alt="Mrs. Frizzle" width="600"/>
+
 *The Magic School Bus - Goes Cellular - Ep. 44 was the inspiration of this 
 repo :))*
 
@@ -38,7 +39,9 @@ Available Climate variables: ['Avg_Temp'
 
 # ANN Model
 <a href="#ANN Model">Figure 2</a> shows the architecture of the ANN.
-![ANN Model](plots/ANN.jpg)
+
+<img src="plots/ANN.jpg" alt="ANN Model" width="600"/>
+
 *Architecture of the ANN*
 
 For each climate variable, an ANN is separately structured
@@ -48,11 +51,7 @@ an hour in a day.
 
 The models are trained for 3000 iterations (l).
 The early stopping method is used as a regularizer during
-training to prevent overfitting. This method monitors the
-model’s performance on the validation dataset by observing the
-errors. This work considers patience of 40 iterations, meaning
-the training will stop when the validation error increases or
-does not improve for 40 consecutive iterations.
+training to prevent overfitting with patience of 40 iterations.
 
 The rolling window approach is used to train the ANN models, enhancing
 the model’s ability to generalize across different temporal
@@ -64,10 +63,64 @@ in each iteration, covering all possible 15-year periods within
 the dataset. The final year of the dataset, not included in the
 rolling windows, is used to test the model’s performance after
 the training and validation phases.
-
-![Rolling Window](plots/RW.jpg)
+<img src="plots/RW.jpg" alt="Rolling Window" width="600"/>
 
 *Rolling Window*
+
+# Results
+## Test dataset
+### 1- Average Temperature
+R-squared: 0.9611
+
+<p float="left">
+  <img src="plots/avg-temp-daily-test.png" width="600" />
+  <img src="plots/avg-temp-test-scatter.png" width="600" />
+</p>
+
+### 2- Wind Speed
+R-squared: 0.6964
+
+<p float="left">
+  <img src="plots/wind-daily-test.png" width="600" />
+  <img src="plots/wind-test-scatter.png" width="600" />
+</p>
+
+### 3- Solar Irradiance
+
+R-squared: 0.6964
+
+<p float="left">
+  <img src="plots/solar-test-daily.png" width="600" />
+  <img src="plots/solar-test-scatter.png" width="600" />
+</p>
+
+### 4- Humidity
+
+R-squared: 0.7985
+
+<p float="left">
+  <img src="plots/humidity-daily-test.png" width="600" />
+  <img src="plots/humidity-test-scatter.png" width="600" />
+</p>
+
+
+
+##  Coupled Model Intercomparison Project Phase 5 (CMIP5) - 2028
+### 1- Average Temperature
+
+<img src="plots/avg-temp-predicted.png" width="600"/>
+
+### 2- Wind Speed
+
+<img src="plots/wind-predicted.png" width="600"/>
+
+### 3- Solar Irradiance
+
+<img src="plots/solar-predicted.png" width="600"/>
+
+### 4- Humidity
+
+
 
 # References
 [1] H. C. Bloomfield et al., ”The Importance of Weather and Climate to Energy Systems: A Workshop on Next Generation Challenges in Energy–Climate Modeling”, Bulletin of the American Meteorological Society, vol. 102, no. 1, pp. E159–E167, 2021.
