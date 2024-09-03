@@ -70,7 +70,7 @@ the training and validation phases.
 # Results
 ## Test dataset
 ### 1- Average Temperature
-R-squared: 0.9611
+R-squared: 0.9622
 
 <p float="left">
   <img src="plots/avg-temp-daily-test.png" width="600" />
@@ -78,7 +78,7 @@ R-squared: 0.9611
 </p>
 
 ### 2- Wind Speed
-R-squared: 0.6964
+R-squared: 0.6856
 
 <p float="left">
   <img src="plots/wind-daily-test.png" width="600" />
@@ -96,14 +96,12 @@ R-squared: 0.6964
 
 ### 4- Humidity
 
-R-squared: 0.7985
+R-squared: 0.8003
 
 <p float="left">
   <img src="plots/humidity-daily-test.png" width="600" />
   <img src="plots/humidity-test-scatter.png" width="600" />
 </p>
-
-
 
 ##  Coupled Model Intercomparison Project Phase 5 (CMIP5) - 2028
 ### 1- Average Temperature
@@ -120,7 +118,7 @@ R-squared: 0.7985
 
 ### 4- Humidity
 
-
+<img src="plots/humidity-daily-predicted.png" width="600"/>
 
 # References
 [1] H. C. Bloomfield et al., ”The Importance of Weather and Climate to Energy Systems: A Workshop on Next Generation Challenges in Energy–Climate Modeling”, Bulletin of the American Meteorological Society, vol. 102, no. 1, pp. E159–E167, 2021.
